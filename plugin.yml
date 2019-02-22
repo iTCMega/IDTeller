@@ -1,0 +1,16 @@
+name: IDTeller
+main: idteller\main
+version: 1.0
+api:
+- 3.0.0
+author: MyNET
+description: Hold the item to know the ID!
+
+commands:
+ id:
+  description: "usage : /id"
+  permission: idteller.command.id
+permissions:
+  idteller.command.id:
+    default: op
+    description: "You dont have permission to use IDTeller Commands"
