@@ -1,5 +1,4 @@
 # ID-Teller
 
-To-do
-- break the block will tell you the id. (**Done**)
+This plugin will tell you the id. Break the block or run by using command!
 
