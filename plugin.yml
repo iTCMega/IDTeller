@@ -3,6 +3,7 @@ main: idteller\main
 version: 1.0
 api:
 - 3.0.0
+- 4.0.0
 author: MyNET
 description: Hold the item to know the ID!
 
