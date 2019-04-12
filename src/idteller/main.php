@@ -18,12 +18,13 @@ use pocketmine\event\block\BlockBreakEvent;
 class main extends PluginBase implements Listener{
 
 	public function onEnable(){
-		$this->server->getPluginManager()->registerEvents($this,  $this);
-                $this->getLogger()->info(TextFormat::GREEN . "ID-Teller Loaded!"); 
+		self::$instance = $this;
+	    Server::getInstance()->getLogger()->info(TextFormat::GREEN . "ID-Teller Loaded!");
+		Server::getInstance()->getPluginManager()->registerEvents($this,  $this);
    	}
         
 	public function onDisable(){
-                $this->getLogger()->info(TextFormat::RED . "ID-Teller Disabled!");
+        $this->getLogger()->info(TextFormat::RED . "ID-Teller Disabled!");
    	}
 	
 	public function onBreak(BlockBreakEvent $event){
@@ -44,4 +45,10 @@ class main extends PluginBase implements Listener{
 		}
 		return true;
 	}
+	
+	public static function getInstance(){
+		return self::$instance;
+	}
+
+	public static $instance;
 }
